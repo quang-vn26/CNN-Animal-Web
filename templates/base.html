@@ -53,8 +53,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{url_for('index')}}">Home</a></li>
-        <li><a href="{{url_for('faceapp')}}">FaceApp</a></li>
-        <li><a href="#">Images Process</a></li>
+        <li><a href="{{url_for('cnn')}}">CNN</a></li>
+        <li><a href="{{url_for('vgg16_tf')}}">VGG16_TL</a></li>
       </ul>
     </div>
   </div>
@@ -62,9 +62,8 @@
 {% block bodyblock %}
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h3 class="margin">Image Processing and Gender Detect</h3>
+  <h3 class="margin">Animal Classification</h3>
   <img src="{{url_for('static',filename='images/logo.png')}}" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <p>This a project about image process, we make to learn more thing interesting things about that</p>
 </div>
 {%endblock%}
 

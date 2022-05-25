@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+
+<div class="container-fluid bg-1 ">
+    <h3 class="margin text-center">Animal Classification</h3>
+    <br>
+    <div class="container" >
+        <form action="" method="POST" enctype="multipart/form-data">
+            <label for="upload">Upload image to predict</label>
+            <input type="file" id="upload" name="image" required="true">
+            <br>
+            <input type="submit" value="upload">
+        </form>
+    </div>
+
+    {% if fileupload %}
+        <div class="container">
+            <div class="row">
+                <p>{{img_name}}</p>
+                <div class="col-md-6">
+                    <img src="{{url_for('static',filename='uploads/')}}{{img_name}}" alt="" width="{{w}}" height="300">
+                </div>
+            </div>
+            <div class="row">
+                <p>Result: {{result_predit}}</p>
+            </div>
+            <div class="row">
+                <p>Score: {{score}}</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}
